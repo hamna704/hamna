@@ -1,0 +1,35 @@
+﻿@model List<square.Models.User>
+@{
+    ViewBag.Title = "form";
+    Layout = null;
+}
+
+<h2>form</h2>
+
+<table style="width:100%" border="1">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td> </td>
+        <td> </td>
+    </tr>
+
+    @foreach( var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Name</td>
+            <td>@x.Email</td>
+            <td>@x.Password</td>
+
+            <td><a href="update/@x.Id">Update</a></td>
+            <td><a href="~/Home/Delete/@x.Id">Delete</a></td>
+        </tr>
+    }
+
+</table>
+
+
+

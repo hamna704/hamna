@@ -1,0 +1,17 @@
+﻿@model square.Models.User
+@{
+    ViewBag.Title = "Signup";
+    Layout = null;
+}
+
+<h2>Signup</h2>
+<form action="/Home/SignupConfirm" method="post">
+    <input placeholder="Name" name="Name" type="text" required=""><br /><br />
+    <input placeholder="Email Address" name="Email" type="email" required=""><br /><br />
+    <input placeholder="Password" name="Password" type="password" required=""><br /><br />
+    <input placeholder="Confirm Password" name="Password" type="password" required=""><br /><br />
+    <div class="sign-up">
+        <input type="submit" value="Create Account" />
+    </div>
+</form>
+

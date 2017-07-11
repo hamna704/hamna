@@ -1,0 +1,17 @@
+﻿@model square.Models.User
+@{
+    ViewBag.Title = "update";
+    Layout = null;
+}
+
+<h2>update</h2>
+
+<form action="/Home/updateConfirm/@Model.Id" method="post">
+    <input placeholder="Name" name="Name" type="text" required="" value="@Model.Name"><br /><br />
+    <input placeholder="Email Address" name="Email" type="email" required="" value="@Model.Email"><br /><br />
+    <input placeholder="Password" name="Password" type="password" required="" value="@Model.Password"><br /><br />
+    
+    <input type="submit" value="Update" />
+    
+</form>
+
